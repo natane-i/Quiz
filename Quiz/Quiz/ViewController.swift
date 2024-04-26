@@ -16,8 +16,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         // テキストの変更
-        self.label.text = "Hello"
-        
+        var str = ""
+        str = "Hello Swift"
+        self.label.text = str
     }
     
     @IBAction func pressButton(_ sender: Any) {
