@@ -11,24 +11,19 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var label: UILabel!
     
-    let quizzes = ["猫は人間を超でっかいネコだと思っている？",
-                   "イヌは食べ物の美味しさを味よりも匂いで判断している？",
-                   "トラのしましま模様は皮膚まで繋がっていない？"]
+    var date = Date()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        var str = ""
-        str = self.quizzes[0]
-        self.label.text = str
+        self.label.text = self.date.description
         
     }
     
     @IBAction func pressButton(_ sender: Any) {
-        // ボタンクリックでテキスト変更
-        self.label.text = "ボタンを押しました"
-        self.label.textColor = UIColor.red
+        self.date.addTimeInterval(60 * 60 * 9)
+        self.label.text = self.date.description
     }
 }
 
