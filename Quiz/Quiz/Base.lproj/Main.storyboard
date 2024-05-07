@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rfn-B1-hBN">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -9,6 +9,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="TEZ-M5-UDT">
+            <objects>
+                <navigationController id="rfn-B1-hBN" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A5b-Wu-wOc">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="yql-bW-G8I"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SI3-M4-E96" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-727" y="4"/>
+        </scene>
         <!--最初の画面-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -51,6 +67,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="pressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tQu-Ov-J5u"/>
+                                    <segue destination="MqO-xk-tDX" kind="show" id="OJW-ew-kg4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -66,8 +83,10 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7ff-jy-fBd" secondAttribute="trailing" constant="32" id="yfa-Fv-Qrz"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="tBt-r9-4fa"/>
                     <connections>
                         <outlet property="label" destination="wEM-xN-Qb8" id="bgo-Ah-yaE"/>
+                        <outlet property="nameTextField" destination="ryd-e6-Pg5" id="2Xc-mL-7pL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -77,7 +96,7 @@
         <!--クイズ画面-->
         <scene sceneID="7UB-ns-HCk">
             <objects>
-                <viewController title="クイズ画面" id="MqO-xk-tDX" sceneMemberID="viewController">
+                <viewController title="クイズ画面" id="MqO-xk-tDX" customClass="QuizViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pIr-5D-DD1">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,6 +158,10 @@
                             <constraint firstItem="K28-UO-5aJ" firstAttribute="top" secondItem="N6I-kb-STz" secondAttribute="bottom" constant="50" id="vw0-tK-udv"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="F5c-40-adg"/>
+                    <connections>
+                        <outlet property="label" destination="N6I-kb-STz" id="gSR-n6-g3A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tfP-OR-tMM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

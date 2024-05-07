@@ -13,6 +13,7 @@
 		BB9D3EE22BDA2F66000EDA62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB9D3EE02BDA2F66000EDA62 /* Main.storyboard */; };
 		BB9D3EE42BDA2F67000EDA62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB9D3EE32BDA2F67000EDA62 /* Assets.xcassets */; };
 		BB9D3EE72BDA2F67000EDA62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB9D3EE52BDA2F67000EDA62 /* LaunchScreen.storyboard */; };
+		BBF412422BE9F55F001D9226 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF412412BE9F55F001D9226 /* QuizViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BB9D3EE32BDA2F67000EDA62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB9D3EE62BDA2F67000EDA62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB9D3EE82BDA2F67000EDA62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBF412412BE9F55F001D9226 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				BB9D3EDA2BDA2F66000EDA62 /* AppDelegate.swift */,
 				BB9D3EDC2BDA2F66000EDA62 /* SceneDelegate.swift */,
 				BB9D3EDE2BDA2F66000EDA62 /* ViewController.swift */,
+				BBF412412BE9F55F001D9226 /* QuizViewController.swift */,
 				BB9D3EE02BDA2F66000EDA62 /* Main.storyboard */,
 				BB9D3EE32BDA2F67000EDA62 /* Assets.xcassets */,
 				BB9D3EE52BDA2F67000EDA62 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				BB9D3EDF2BDA2F66000EDA62 /* ViewController.swift in Sources */,
 				BB9D3EDB2BDA2F66000EDA62 /* AppDelegate.swift in Sources */,
 				BB9D3EDD2BDA2F66000EDA62 /* SceneDelegate.swift in Sources */,
+				BBF412422BE9F55F001D9226 /* QuizViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
