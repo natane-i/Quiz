@@ -33,13 +33,44 @@ class QuizViewController: UIViewController {
         self.quizCard.quizImageView.image = UIImage(named: manager.currentQuiz.imageName)
     }
     
+    func answer() {
+        var translationTransform: CGAffineTransform
+        let screenWidth = UIScreen.main.bounds.width
+        let y = UIScreen.main.bounds.height * 0.2
+        
+        if self.quizCard.style == .right {
+            translationTransform = CGAffineTransform(translationX: screenWidth, y: y)
+            self.manager.answerQuiz(answer: true)
+        } else {
+            translationTransform = CGAffineTransform(translationX: -screenWidth, y: y)
+            self.manager.answerQuiz(answer: false)
+        }
+        
+        UIView.animate(
+            withDuration: 0.5, delay: 0.1, options: [.curveLinear],
+            animations: {
+                self.quizCard.transform = translationTransform
+            }, completion: { [unowned self] (finished) in
+                if finished {
+                    self.showNextQuiz()
+                }
+            })
+    }
+    
+    func showNextQuiz() {
+        self.manager.nextQuiz()
+        self.quizCard.transform = CGAffineTransform.identity
+        self.quizCard.style = .initial
+        self.loadQuiz()
+    }
+    
     @objc func dragQuizCard(_ sender: UIPanGestureRecognizer) {
         
         switch sender.state {
         case .began, .changed:
             self.transformQuizCard(gesture: sender)
         case .ended:
-            break
+            self.answer()
         default:
             break
         }
