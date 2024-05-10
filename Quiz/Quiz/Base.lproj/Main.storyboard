@@ -167,21 +167,22 @@
                     <connections>
                         <outlet property="label" destination="N6I-kb-STz" id="gSR-n6-g3A"/>
                         <outlet property="quizCard" destination="K28-UO-5aJ" id="AvY-8V-fdm"/>
+                        <segue destination="8h0-TY-jTN" kind="show" identifier="goToResult" id="gI6-rt-Fi4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tfP-OR-tMM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="713.74045801526711" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="726" y="4"/>
         </scene>
         <!--結果画面-->
         <scene sceneID="eFd-fd-9yC">
             <objects>
-                <viewController title="結果画面" id="8h0-TY-jTN" sceneMemberID="viewController">
+                <viewController title="結果画面" id="8h0-TY-jTN" customClass="ResultViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eSu-II-l2J">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wwz-C0-shb">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Wwz-C0-shb">
                                 <rect key="frame" x="16" y="346" width="361" height="160"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -199,6 +200,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="pushResultButton:" destination="8h0-TY-jTN" eventType="touchUpInside" id="iCO-7H-v3E"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wi-2B-6Ff">
                                 <rect key="frame" x="16" y="286" width="361" height="36"/>
@@ -225,10 +229,15 @@
                             <constraint firstItem="6wi-2B-6Ff" firstAttribute="leading" secondItem="MZT-bq-sFW" secondAttribute="leading" constant="16" id="xZE-UT-K23"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="lys-th-jUL"/>
+                    <connections>
+                        <outlet property="label" destination="6wi-2B-6Ff" id="OB2-XO-BLJ"/>
+                        <outlet property="textView" destination="Wwz-C0-shb" id="v2Z-SJ-Sff"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AjC-fc-065" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1400.7633587786258" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1427" y="4"/>
         </scene>
     </scenes>
     <resources>
