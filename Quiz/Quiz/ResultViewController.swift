@@ -14,7 +14,8 @@ class ResultViewController: UIViewController {
     
     var nameText: String = ""
     var score: Int = 0
-    var currentIndex: Int = 0
+    let quizManager = QuizManager()
+    //var currentIndex: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,12 +25,14 @@ class ResultViewController: UIViewController {
         self.label.text = "\(self.nameText)さん　あなたのスコアは\(self.score)です。"
         
         var text = ""
+        let answerCount = quizManager.quizzes.count
+        
         switch self.score {
         case 0 ... 2:
             text = "動物に関してあまり興味はないでしょうか？\n\nもっと頑張りましょう！"
-        case 3 ... currentIndex:
+        case 3 ..< answerCount:
             text = "動物にはかなり詳しい方ですね！\n\nもう少しです！"
-        case currentIndex + 1:
+        case answerCount:
             text = "全問正解です！\n\nおめでとうございます！"
         default:
             break

@@ -104,7 +104,7 @@ class QuizViewController: UIViewController {
         if let resultViewController: ResultViewController = segue.destination as? ResultViewController {
             resultViewController.nameText = self.nameText
             resultViewController.score = self.manager.score
-            resultViewController.currentIndex = self.manager.currentIndex
+            //resultViewController.currentIndex = self.manager.currentIndex
         }
     }
     
